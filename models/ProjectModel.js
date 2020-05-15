@@ -30,9 +30,10 @@ function addProject(newProject) {
 }
 
 function getTask(id) {
-    return db('tasks')
-        .where('tasks.project_id', '=', id)
-        .join('projects', 'projects.id', '=', id)
+    return db.select('t.id', 't.task_description', 't.task_completed', 'p.project_name', 'p.project_description')
+        .from('tasks as t')
+        .join('projects as p', 'p.id', '=', `t.project_id`)
+        .where({project_id: id})
 }
 
 function addTask(newTask, id) {

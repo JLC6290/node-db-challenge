@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] Explain the difference between `Relational Databases` and `SQL`.
 
+
+
 - [ ] Why do tables need a `primary key`?
+
+**In order for each record in a database to be uniquely identifiable. This helps to preserve data integrity**
 
 - [ ] What is the name given to a table column that references the primary key on another table.
 
+**A foreign key. As the name implies, it simply references the primary key of another table, though it can also reference a non-primary, but still unique, key of another table. The result is a relationship between the two tables based on the associated column.**
+
 - [ ] What do we need in order to have a _many to many_ relationship between two tables.
+
+**An intermediary table. This table will hold a set of foreign keys which reference primary keys on the associated table. It is effectively a new table created based on this relationship.**
 
 ## Minimum Viable Product
 
